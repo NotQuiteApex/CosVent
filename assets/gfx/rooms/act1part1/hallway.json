@@ -1,0 +1,23 @@
+{
+	"bg": "bg.png",
+	"x":90,"y":510, "ox":90,"oy":556,
+	"w":2,"h":8, "xb":374,"yb":520,
+
+	"collidables": [
+		"return map_calcWall(-194, 0,   5, 1)",
+		"return map_calcWall( 678, 446, 5, 1)",
+		"return map_calcWall(-160, 28,  1, 7)",
+		"return map_calcWall( 118,-156, 1,10)",
+	],
+
+	"interactables": [
+		"return {x=256,y=-76, pd1=1,pd2=2, coll=map_calcWall(0,0, 1,12, 32,16), func=function() panels.addToQueue('circuit')     end}",
+		"return {x=525,y=59,  pd1=1,pd2=2, coll=map_calcWall(0,0, 1, 8, 32,16), func=function() panels.addToQueue('familyphoto') end}",
+		"return {x=736,y=164, pd1=1,pd2=2, coll=map_calcWall(0,0, 1,10, 32,16), func=function() panels.addToQueue('daddoor')     end}",
+	],
+
+	"triggerzones": [
+		"return {x=136,y=90,  coll=map_calcWall(0,0, 1,9, 32,16),  func=function() tomap = 'bedroom'; maptox,maptoy = 956,534  end}",
+		"return {x=600,y=322, coll=map_calcWall(0,0, 1,10, 32,16), func=function() tomap = 'tvroom';  maptox,maptoy = 550,1060; mapg.checkedcrowbar = false end}",
+	]
+}

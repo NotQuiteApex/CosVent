@@ -1,0 +1,36 @@
+{
+	"bg": "bg.png",
+	"x":64,"y":792, "ox":64,"oy":792,
+	"w":7,"h":6, "xb":650,"yb":710,
+
+	"back": [
+		"tvset",
+	],
+	"zway": [
+		"lamp",
+		"table",
+		"couch",
+		"stairs",
+	],
+
+	"collidables": [
+		"return map_calcWall(-194,0,   9,  1)",
+		"return map_calcWall( 308,428, 10, 1)",
+		"return map_calcWall( 416,476, 1, -4)",
+		"return map_calcWall(-194,0,   1, 5.2)",
+		"return map_calcWall(598,-396, 1,  9)",
+	],
+
+	"interactables": [
+		"return {x=444,y=-140, pd1=-1,pd2=2, coll=map_calcWall(0,0, 12,1, 32,16), func=function() panels.addToQueue('tvset')     end}",
+		"return {x=640,y= 92,  pd1= 1,pd2=2, coll=map_calcWall(0,0,  1,9, 32,16), func=function() panels.addToQueue('couch')     end}",
+		"return {x=536,y=-20,  pd1= 1,pd2=2, coll=map_calcWall(0,0,  1,9, 32,16), func=function() panels.addToQueue('table')     end}",
+		"return {x=536,y=-38,  pd1= 1,pd2=1, coll=map_calcWall(0,0, 12,1, 32,16), func=function() panels.addToQueue('table')     end}",
+		"return {x=600,y= 276, pd1= 1,pd2=1, coll=map_calcWall(0,0, 12,1, 32,16), func=function() panels.addToQueue('frontdoor') end}",
+	],
+
+	"triggerzones": [
+		"return {x=136+32*2.5,y=90+16*12, coll=map_calcWall(0,0, 10,1, 32,16), func=function() tomap = 'hallway'; maptox,maptoy = 818,848 end}",
+		"return {x=28,y=-24, coll=map_calcWall(0,0, 14,1, 32,16), func=function() if mapg.gotcrowbar then if not mapg.ended then mapg.ended=true; tostate='heartbeat'; function statetransfn() plyr.x,plyr.y = 170,460 end end elseif not mapg.checkedcrowbar then panels.addToQueue('warncrowbar'); mapg.checkedcrowbar = true end end}",
+	]
+}

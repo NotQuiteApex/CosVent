@@ -1,0 +1,6 @@
+{
+	"fn": "if mapg.arcadeborkd then this.path = 'arcadecabinetborkd.png' end",
+	"path": "arcadecabinet.png",
+	"x":556,"y":-262, "ox":18,"oy":322,
+	"coll": [9,324, 136,384, 261,324]
+}

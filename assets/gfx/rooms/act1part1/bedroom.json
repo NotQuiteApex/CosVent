@@ -1,0 +1,38 @@
+{
+	"bg": "bg.png",
+	"x":80,"y":700, "ox":127,"oy":785,
+	"w":7,"h":7, "xb":800,"yb":460,
+
+	"back": [
+		"arcadecabinet",
+		"gitcard",
+	],
+	"zway": [
+		"serverrack",
+		"deskchair",
+	],
+	"frnt": [
+		"bed",
+		"desk",
+	],
+
+	"collidables": [
+		"return map_calcWall(-194,  000, 9,1)",
+		"return map_calcWall( 574,  384, 9,1)",
+		"return map_calcWall(-194,  000, 1,9)",
+		"return map_calcWall( 574, -384, 1,9)",
+	],
+
+	"interactables": [
+		"return {x=216,  y=-108, pd1=-1, pd2=1, coll=map_calcWall(0,0, 1,21, 32,16), func=function() panels.addToQueue('bed')            end}",
+		"return {x=530,  y=-256, pd1=1,  pd2=2, coll=map_calcWall(0,0, 1,08, 32,16), func=function() panels.addToQueue('arcadecase')     end}",
+		"return {x=674,  y=-200, pd1=-1, pd2=2, coll=map_calcWall(0,0, 8,01, 32,16), func=function() panels.addToQueue('arcadecaseside') end}",
+		"return {x=1000, y=15,   pd1=1,  pd2=2, coll=map_calcWall(0,0, 1,09, 32,16), func=function() panels.addToQueue('serverrack')     end}",
+		"return {x=526,  y=112,  pd1=-1, pd2=1, coll=map_calcWall(0,0, 1,16, 32,16), func=function() panels.addToQueue('computer')       end}",
+	],
+
+	"triggerzones": [
+		"return {x=840,y=-212, coll={1,18, 60,-7, 99,66, 40,96}, func=function() if not mapg.gitcard then mapg.gitcard=true; currentmapdata.back[2]=nil; panels.addToQueue('dadcard') end end}",
+		"return {x=846,y=-246, coll=map_calcWall(0,0, 1,10, 32,16), func=function() tomap = 'hallway'; maptox,maptoy = 402,606 end}",
+	]
+}

@@ -1,0 +1,6 @@
+{
+	"fn": "if mapg.gotcrowbar then this.path = 'serverracknocro.png' end",
+	"path": "serverrack.png",
+	"x":1013,"y":11, "ox":5,"oy":240,
+	"coll": [5,235, 155,310, 149,153]
+}

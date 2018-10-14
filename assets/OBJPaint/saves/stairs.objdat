@@ -1,0 +1,5 @@
+id = stairs,
+ox=348,oy=247,
+pnts = {
+{ z=0,  },
+}

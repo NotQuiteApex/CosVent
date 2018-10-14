@@ -1,0 +1,5 @@
+{
+	"fn": "if mapg.gitcard then this.path = nil end",
+	"path": "gitcard.png",
+	"x":888,"y":-166, "ox":48,"oy":46
+}
